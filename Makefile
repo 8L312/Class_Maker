@@ -1,0 +1,31 @@
+SRCS		= classmaker.cpp
+
+OBJS		= ${SRCS:.cpp=.o}
+
+RM			= rm -f
+
+NAME		= Class_Maker
+
+FLAGS		= -Wall -Wextra -Werror -pedantic
+
+CC			= g++
+
+.cpp.o:
+			${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
+
+${NAME}:	${OBJS}
+			${CC} ${FLAGS} -o ${NAME} ${OBJS}
+
+all:		${NAME}
+
+clean:
+			${RM} ${OBJS}
+
+fclean:		clean
+			${RM} ${NAME}
+
+re:			fclean all
+
+good:		${NAME} clean
+
+.PHONY:		all clean fclean re
