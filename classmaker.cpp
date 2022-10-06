@@ -108,13 +108,13 @@ int main(int ac, char** av)
 
 	/* Default constructor definition */
 
-	class_cpp << av[1] << "::" <<av[1] << "(void): _exemple(0)\n{\n";
+	class_cpp << av[1] << "::" <<av[1] << "(void): _Example(0)\n{\n";
 	class_cpp << "	//std::cout << \"Default constructor called\\n\"\n";
 	class_cpp << "	return ;\n}\n\n";
 
 	/* Parametric constructor definition (not canonical but quite useful) */
 
-	class_cpp << av[1] << "::" <<av[1] << "(int const n): _exemple(n)\n{\n";
+	class_cpp << av[1] << "::" <<av[1] << "(int const n): _Example(n)\n{\n";
 	class_cpp << "	//std::cout << \"Default constructor called\\n\"\n";
 	class_cpp << "	return ;\n}\n\n";
 
