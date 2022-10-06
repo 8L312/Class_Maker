@@ -109,26 +109,26 @@ int main(int ac, char** av)
 	/* Default constructor definition */
 
 	class_cpp << av[1] << "::" <<av[1] << "(void): _Example(0)\n{\n";
-	class_cpp << "	//std::cout << \"Default constructor called\\n\"\n";
+	class_cpp << "	//std::cout << \"Default constructor called\\n\";\n";
 	class_cpp << "	return ;\n}\n\n";
 
 	/* Parametric constructor definition (not canonical but quite useful) */
 
 	class_cpp << av[1] << "::" <<av[1] << "(int const n): _Example(n)\n{\n";
-	class_cpp << "	//std::cout << \"Default constructor called\\n\"\n";
+	class_cpp << "	//std::cout << \"Default constructor called\\n\";\n";
 	class_cpp << "	return ;\n}\n\n";
 
 	/* Copy constructor definition */
 
 	class_cpp << av[1] << "::" << av[1] << "(" << av[1] << " const &src)\n{\n";
-	class_cpp << "	//std::cout << \"Copy constructor called\\n\"\n";
+	class_cpp << "	//std::cout << \"Copy constructor called\\n\";\n";
 	class_cpp << "	*this = src;\n";
 	class_cpp << "	return ;\n}\n\n";
 
 	/* Destructor definition */
 
 	class_cpp << av[1] << "::~" << av[1] << "(void)\n{\n";
-	class_cpp << "	//std::cout << \"Destructor called\\n\"\n";
+	class_cpp << "	//std::cout << \"Destructor called\\n\";\n";
 	class_cpp << "	return ;\n}\n\n";
 
 	/* Getter of _Exemple (also non canonical) */
@@ -145,7 +145,7 @@ int main(int ac, char** av)
 	/* Assignation operator definiton */
 
 	class_cpp << av[1] << "	&" << av[1] << "::operator=(" << av[1] << " const &rhs)\n{\n";
-	class_cpp << "	//std::cout << \"Assignation operator called\\n\"\n";
+	class_cpp << "	//std::cout << \"Copy assignment operator called\\n\";\n";
 	class_cpp << "	//copy here the eventual values like :\n	this->_Example = rhs.getExample();\n\n";
 	class_cpp << "	return (*this);\n}\n";
 
