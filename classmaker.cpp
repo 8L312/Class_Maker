@@ -74,7 +74,7 @@ int main(int ac, char** av)
 
 	/* Common includes */
 
-	class_hpp << "# include <iostream>\n# include <string>\n# include <stdlib.h>\n# include <stdexcept>\n\n";
+	class_hpp << "# include <iostream>\n# include <string>\n# include <cstdlib>\n# include <stdexcept>\n\n";
 
 	/* Class definition */
 
